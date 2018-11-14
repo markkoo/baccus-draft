@@ -1,3 +1,139 @@
+.fixedBackground {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fixedBackground:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+@media (max-width: 768px) {
+  .mainTitle .h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+}
+
+.topFooter .reservationForm form input,
+.topFooter .reservationForm form textarea {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #222222;
+  color: #000;
+  height: 45px;
+  margin-bottom: 5px;
+  outline: none;
+  padding: 0 20px;
+}
+
+
+.topFooter .reservationForm form textarea {
+  height: 196px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+.topFooter .reservationForm form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.topFooter .reservationForm form .inputfile + label {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #222222;
+  color: #54565B;
+  font-size: 13px;
+  height: 45px;
+  margin-bottom: 5px;
+  outline: none;
+  padding: 11px 20px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.topFooter .reservationForm form .inputfile + label svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.mainTitle {
+  padding: 200px 0 150px;
+  color: white;
+}
+
+.mainTitle .content {
+  max-width: 800px;
+}
+
+.mainTitle .content .h1 {
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.mainTitle .content .h3 {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mainTitle .content .h3 {
+    font-size: 18px;
+  }
+}
+
+.shadowCard .card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 60px 10px;
+  border-radius: 10px;
+}
+
+.shadowCard .card .centerContent {
+  max-width: 880px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.shadowCard .card .centerContent p {
+  color: #787b82;
+  line-height: 1.8;
+}
+
+.shadowCard .card .centerContent p b {
+  color: #89331B;
+}
+
+@media (max-width: 768px) {
+  .shadowCard .card .centerContent {
+    font-size: 14px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -909,6 +1045,142 @@ router-outlet {
           animation: rotating 2s linear infinite;
 }
 
+.fixedBackground {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fixedBackground:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+@media (max-width: 768px) {
+  .mainTitle .h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+}
+
+.topFooter .reservationForm form input,
+.topFooter .reservationForm form textarea {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #222222;
+  color: #000;
+  height: 45px;
+  margin-bottom: 5px;
+  outline: none;
+  padding: 0 20px;
+}
+
+
+.topFooter .reservationForm form textarea {
+  height: 196px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+.topFooter .reservationForm form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.topFooter .reservationForm form .inputfile + label {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #222222;
+  color: #54565B;
+  font-size: 13px;
+  height: 45px;
+  margin-bottom: 5px;
+  outline: none;
+  padding: 11px 20px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.topFooter .reservationForm form .inputfile + label svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.mainTitle {
+  padding: 200px 0 150px;
+  color: white;
+}
+
+.mainTitle .content {
+  max-width: 800px;
+}
+
+.mainTitle .content .h1 {
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.mainTitle .content .h3 {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mainTitle .content .h3 {
+    font-size: 18px;
+  }
+}
+
+.shadowCard .card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 60px 10px;
+  border-radius: 10px;
+}
+
+.shadowCard .card .centerContent {
+  max-width: 880px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.shadowCard .card .centerContent p {
+  color: #787b82;
+  line-height: 1.8;
+}
+
+.shadowCard .card .centerContent p b {
+  color: #89331B;
+}
+
+@media (max-width: 768px) {
+  .shadowCard .card .centerContent {
+    font-size: 14px;
+  }
+}
+
 ::-moz-selection {
   background: #89331B;
   color: white;
@@ -931,7 +1203,7 @@ router-outlet {
   font-size: 24px;
 }
 
-.buttonPrimaryLg {
+.buttonPrimaryOutlineLg {
   outline: none;
   background: transparent;
   cursor: pointer;
@@ -947,12 +1219,12 @@ router-outlet {
   text-align: center;
 }
 
-.buttonPrimaryLg:hover {
+.buttonPrimaryOutlineLg:hover {
   border-color: #D5D7DB;
   color: #D5D7DB;
 }
 
-.buttonSecondaryLg {
+.buttonSecondaryOutlineLg {
   outline: none;
   background: transparent;
   cursor: pointer;
@@ -967,10 +1239,33 @@ router-outlet {
   transition: .3s;
 }
 
-.buttonSecondaryLg:hover {
+.buttonSecondaryOutlineLg:hover {
   background: #89331B;
   border-color: #89331B;
   color: #a5a7ac;
+}
+
+.buttonPrimaryLg {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  height: 43px;
+  background: #89331B;
+  color: white;
+  width: 100%;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-align: center;
+}
+
+.buttonPrimaryLg:hover {
+  background: white;
+  color: #89331B;
+  border: 2px solid #89331B;
 }
 
 header {
@@ -1185,6 +1480,7 @@ header .areaForFixed .content .toggleNavButton {
   visibility: hidden;
   display: block;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -1209,7 +1505,7 @@ header .areaForFixed .content .toggleNavButton {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .mobileNav .content {
@@ -1421,61 +1717,6 @@ header .areaForFixed .content .toggleNavButton {
   margin-top: 10px;
 }
 
-.topFooter .reservationForm form input,
-.topFooter .reservationForm form textarea {
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid #222222;
-  color: #000;
-  height: 45px;
-  margin-bottom: 5px;
-  outline: none;
-  padding: 0 20px;
-}
-
-.topFooter .reservationForm form textarea {
-  height: 196px;
-  padding-top: 15px;
-  margin-bottom: 0;
-}
-
-.topFooter .reservationForm form .inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.topFooter .reservationForm form .inputfile + label {
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid #222222;
-  color: #54565B;
-  font-size: 13px;
-  height: 45px;
-  margin-bottom: 5px;
-  outline: none;
-  padding: 11px 20px;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.topFooter .reservationForm form .inputfile + label svg {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  fill: currentColor;
-  margin-top: -0.25em;
-  margin-right: 0.25em;
-}
-
 .bottomFooter {
   border-top: 1px solid #a5a7ac;
   padding: 10px 0;
@@ -1497,244 +1738,132 @@ header .areaForFixed .content .toggleNavButton {
 }
 
 .fixedBackground {
-  background-image: url("../../src/images/home/fixedBg.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  background-image: url("../../src/images/about/fixedBg.jpg");
 }
 
-.fixedBackground:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.42);
-}
-
-.homeFlavour {
-  padding: 60px 0;
-}
-
-@media (max-width: 768px) {
-  .video .h1, .homeFlavour .h1, .homeApplicationLab .h1, .homeNutrition .h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
-  }
-}
-
-.video {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-top: -90px;
-  overflow: hidden;
-}
-
-.video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.video .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+.shadowCard .card .stepper {
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 860px;
+  margin: auto;
+  position: relative;
+}
+
+.shadowCard .card .stepper:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  background: #cfd0d3;
+}
+
+.shadowCard .card .stepper .step {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: white;
   text-align: center;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
-}
-
-.video .content .h1 {
-  margin-top: 50px;
-  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-}
-
-.video .content .line {
-  width: 200px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-}
-
-.video .content .h3 {
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .video .content .h3 {
-    font-size: 18px;
-  }
-}
-
-.homeFlavour .h1 {
-  text-align: center;
-  color: white;
-  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  margin-bottom: 50px;
-}
-
-.homeFlavour a.image-scale-45by25:before {
-  padding-top: calc(25/45 * 100%);
-}
-
-.homeFlavour a:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.homeFlavour a:hover .title {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.homeFlavour a img {
-  width: 100%;
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
-}
-
-.homeFlavour a .title {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  margin-bottom: 0;
-  width: 100%;
-  padding: 5px 10px;
-  text-align: center;
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  width: 82px;
+  height: 82px;
+  border: 2px solid #cfd0d3;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
   -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
-  background: rgba(0, 0, 0, 0.3);
-  text-transform: capitalize;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage, .homeNutrition .sevenThreeBackgroundImage {
-  position: relative;
+.shadowCard .card .stepper .step.active, .shadowCard .card .stepper .step:hover {
+  border-color: #89331B;
+  color: #89331B;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground,
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  position: absolute;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+@media (max-width: 768px) {
+  .shadowCard .card .stepper {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .shadowCard .card .stepper:before {
+    content: none;
+  }
+  .shadowCard .card .stepper .step {
+    height: 42px;
+    border-radius: 0;
+  }
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground {
-  width: 70%;
-  left: 0;
+.shadowCard .card .centerContent {
+  margin-top: 10px;
 }
 
-
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  width: 30%;
-  right: 0;
+.shadowCard .card .centerContent .content {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-  padding-top: 300px;
-  padding-bottom: 100px;
+.shadowCard .card .centerContent .content.show {
+  display: block;
+  -webkit-animation: anim-stepper 1s ease 0.2s 1 normal both running;
+          animation: anim-stepper 1s ease 0.2s 1 normal both running;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .container .h1, .homeNutrition .sevenThreeBackgroundImage .container .h1 {
+.shadowCard .card .centerContent .content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
   font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .container .description, .homeNutrition .sevenThreeBackgroundImage .container .description {
-  color: #54565B;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container a, .homeNutrition .sevenThreeBackgroundImage .container a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 250px;
-}
-
-@media (max-width: 768px) {
-  .homeApplicationLab .sevenThreeBackgroundImage .threeBackground:after, .homeNutrition .sevenThreeBackgroundImage .threeBackground:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
+@-webkit-keyframes anim-stepper {
+  0% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+    display: block;
   }
-  .homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-    padding-top: 200px;
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground {
-  background-image: url("../../src/images/home/applicationLabBg.jpg");
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground {
-  background-image: url("../../src/images/home/applicationLabBg2.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .sevenBackground {
-  background-image: url("../../src/images/home/nutritionBg.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  background-image: url("../../src/images/home/nutritionBg2.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .container .h1 {
-  color: #fcfcfd;
-}
-
-.homeNutrition .sevenThreeBackgroundImage .container .description {
-  color: #fcfcfd;
-}
-
-@media (max-width: 768px) {
-  .homeNutrition .sevenThreeBackgroundImage .threeBackground:after {
-    background: rgba(0, 0, 0, 0.1);
+@keyframes anim-stepper {
+  0% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+    display: block;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+@import '../../src/module/stooges-variables';
+@import '../../src/scss/project-variables';
+@import '../../src/module/stooges-mixin';
+@import '../../src/scss/project-mixin';
+@import '../../src/module/stooges-basscss';
+@import '../../src/scss/project-basscss';
+@import '../../src/scss/fontFamily';
+
+.fixedBackground{
+    @extend %fixedBackground;
+    background-image: url('../../src/images/applicationLab/fixedBg.jpg');
+}
+
+.mainTitle{
+    @extend %transparentBigTitle;
+}
+.shadowCard{
+    .card{
+        @extend %shadowCard;
+        padding:0;
+        overflow: hidden;
+
+        .halfWordHalfImageCarousel{
+            @extend %halfWordHalfImageCarousel;
+        }
+    }
+}

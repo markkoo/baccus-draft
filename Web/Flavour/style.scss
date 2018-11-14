@@ -1,0 +1,38 @@
+@import '../../src/module/stooges-variables';
+@import '../../src/scss/project-variables';
+@import '../../src/module/stooges-mixin';
+@import '../../src/scss/project-mixin';
+@import '../../src/module/stooges-basscss';
+@import '../../src/scss/project-basscss';
+@import '../../src/scss/fontFamily';
+
+.fixedBackground{
+    @extend %fixedBackground;
+    background-image: url('../../src/images/flavour/coffee/fixedBg.jpg');
+}
+
+.mainTitle{
+    @extend %transparentBigTitle;
+}
+.shadowCard{
+    .card{
+        @extend %shadowCard;
+
+        .centerContent{
+            @extend %centerContent;
+        }
+
+        .fourInlineImage{
+            @extend %fourInlineImage;
+        }
+
+        .otherFlavour{
+            @extend %otherFlavour;
+            a{
+                img{
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

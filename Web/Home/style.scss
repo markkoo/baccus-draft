@@ -6,6 +6,54 @@
 @import '../../src/scss/project-basscss';
 @import '../../src/scss/fontFamily';
 
-body{
-    background: red;
+// home
+.fixedBackground{
+    @extend %fixedBackground;
+    background-image: url('../../src/images/home/fixedBg.jpg');
+}
+
+.video{
+    @extend %fullScreenVideo;
+}
+
+.homeFlavour{
+    @extend %threeByTwoContentWithBackground;
+}
+
+.homeApplicationLab{
+    @extend %sevenThereContent;
+    .sevenThreeBackgroundImage{
+        .sevenBackground{
+            background-image: url('../../src/images/home/applicationLabBg.jpg');
+        }
+        .threeBackground{
+            background-image: url('../../src/images/home/applicationLabBg2.jpg');
+        }
+    }
+}
+.homeNutrition{
+    @extend %sevenThereContent;
+    .sevenThreeBackgroundImage{
+        .sevenBackground{
+            background-image: url('../../src/images/home/nutritionBg.jpg');
+        }
+        .threeBackground{
+            background-image: url('../../src/images/home/nutritionBg2.jpg');
+        }
+        .container{
+            .h1{
+                color:$font-color-5;
+            }
+            .description{
+                color:$font-color-5;
+            }
+        }
+        @media #{$breakpoint-down-sm}{
+            .threeBackground{
+                &:after{
+                    background:rgba(black, 0.1);
+                }
+            }
+        }
+    }
 }

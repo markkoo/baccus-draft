@@ -20,192 +20,78 @@
   background: rgba(0, 0, 0, 0.42);
 }
 
-.homeFlavour {
-  padding: 60px 0;
-}
-
 @media (max-width: 768px) {
-  .video .h1, .homeFlavour .h1, .homeApplicationLab .h1, .homeNutrition .h1 {
+  .mainTitle .h1 {
     font-size: 38px;
     margin-bottom: 10px;
   }
 }
 
-.video {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-top: -90px;
-  overflow: hidden;
-}
-
-.video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.video .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.mainTitle {
+  padding: 200px 0 150px;
   color: white;
-  text-align: center;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
-.video .content .h1 {
-  margin-top: 50px;
+.mainTitle .content {
+  max-width: 800px;
+}
+
+.mainTitle .content .h1 {
   font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
 }
 
-.video .content .line {
-  width: 200px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-}
-
-.video .content .h3 {
-  line-height: 1.4;
+.mainTitle .content .h3 {
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .video .content .h3 {
+  .mainTitle .content .h3 {
     font-size: 18px;
   }
 }
 
-.homeFlavour .h1 {
-  text-align: center;
-  color: white;
+.shadowCard .card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 60px 10px;
+  border-radius: 10px;
+}
+
+.shadowCard .card .halfWordHalfImage .word {
+  padding: 100px 100px 90px;
+}
+
+.shadowCard .card .halfWordHalfImage .word .h3 {
+  font-weight: 700;
   font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  margin-bottom: 50px;
+  color: #89331B;
 }
 
-.homeFlavour a.image-scale-45by25:before {
-  padding-top: calc(25/45 * 100%);
-}
-
-.homeFlavour a:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.homeFlavour a:hover .title {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.homeFlavour a img {
-  width: 100%;
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
-}
-
-.homeFlavour a .title {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  margin-bottom: 0;
-  width: 100%;
-  padding: 5px 10px;
-  text-align: center;
-  color: white;
-  -webkit-transition: .3s ease-in;
-  transition: .3s ease-in;
-  background: rgba(0, 0, 0, 0.8);
-  text-transform: capitalize;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage, .homeNutrition .sevenThreeBackgroundImage {
+.shadowCard .card .halfWordHalfImage .imageArea {
   position: relative;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground,
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
+.shadowCard .card .halfWordHalfImage .imageArea .image {
   position: absolute;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground {
-  width: 70%;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: center center no-repeat;
+  background-size: cover;
 }
 
-
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  width: 30%;
-  right: 0;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-  padding-top: 300px;
-  padding-bottom: 100px;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container .h1, .homeNutrition .sevenThreeBackgroundImage .container .h1 {
-  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container .description, .homeNutrition .sevenThreeBackgroundImage .container .description {
-  color: #54565B;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container a, .homeNutrition .sevenThreeBackgroundImage .container a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 250px;
+@media (max-width: 1024px) {
+  .shadowCard .card .halfWordHalfImage .word {
+    padding: 100px 20px 90px;
+  }
+  .shadowCard .card .halfWordHalfImage .word p:not(.h3) {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
-  .homeApplicationLab .sevenThreeBackgroundImage .threeBackground:after, .homeNutrition .sevenThreeBackgroundImage .threeBackground:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-  }
-  .homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-    padding-top: 200px;
+  .shadowCard .card .halfWordHalfImage .imageArea {
+    height: 200px;
   }
 }
 
@@ -1142,192 +1028,78 @@ router-outlet {
   background: rgba(0, 0, 0, 0.42);
 }
 
-.homeFlavour {
-  padding: 60px 0;
-}
-
 @media (max-width: 768px) {
-  .video .h1, .homeFlavour .h1, .homeApplicationLab .h1, .homeNutrition .h1 {
+  .mainTitle .h1 {
     font-size: 38px;
     margin-bottom: 10px;
   }
 }
 
-.video {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-top: -90px;
-  overflow: hidden;
-}
-
-.video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.video .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.mainTitle {
+  padding: 200px 0 150px;
   color: white;
-  text-align: center;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
-.video .content .h1 {
-  margin-top: 50px;
+.mainTitle .content {
+  max-width: 800px;
+}
+
+.mainTitle .content .h1 {
   font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
 }
 
-.video .content .line {
-  width: 200px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-}
-
-.video .content .h3 {
-  line-height: 1.4;
+.mainTitle .content .h3 {
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .video .content .h3 {
+  .mainTitle .content .h3 {
     font-size: 18px;
   }
 }
 
-.homeFlavour .h1 {
-  text-align: center;
-  color: white;
+.shadowCard .card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 60px 10px;
+  border-radius: 10px;
+}
+
+.shadowCard .card .halfWordHalfImage .word {
+  padding: 100px 100px 90px;
+}
+
+.shadowCard .card .halfWordHalfImage .word .h3 {
+  font-weight: 700;
   font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  margin-bottom: 50px;
+  color: #89331B;
 }
 
-.homeFlavour a.image-scale-45by25:before {
-  padding-top: calc(25/45 * 100%);
-}
-
-.homeFlavour a:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.homeFlavour a:hover .title {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.homeFlavour a img {
-  width: 100%;
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
-}
-
-.homeFlavour a .title {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  margin-bottom: 0;
-  width: 100%;
-  padding: 5px 10px;
-  text-align: center;
-  color: white;
-  -webkit-transition: .3s ease-in;
-  transition: .3s ease-in;
-  background: rgba(0, 0, 0, 0.8);
-  text-transform: capitalize;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage, .homeNutrition .sevenThreeBackgroundImage {
+.shadowCard .card .halfWordHalfImage .imageArea {
   position: relative;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground,
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
+.shadowCard .card .halfWordHalfImage .imageArea .image {
   position: absolute;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground, .homeNutrition .sevenThreeBackgroundImage .sevenBackground {
-  width: 70%;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: center center no-repeat;
+  background-size: cover;
 }
 
-
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground,
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  width: 30%;
-  right: 0;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-  padding-top: 300px;
-  padding-bottom: 100px;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container .h1, .homeNutrition .sevenThreeBackgroundImage .container .h1 {
-  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container .description, .homeNutrition .sevenThreeBackgroundImage .container .description {
-  color: #54565B;
-}
-
-.homeApplicationLab .sevenThreeBackgroundImage .container a, .homeNutrition .sevenThreeBackgroundImage .container a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 250px;
+@media (max-width: 1024px) {
+  .shadowCard .card .halfWordHalfImage .word {
+    padding: 100px 20px 90px;
+  }
+  .shadowCard .card .halfWordHalfImage .word p:not(.h3) {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
-  .homeApplicationLab .sevenThreeBackgroundImage .threeBackground:after, .homeNutrition .sevenThreeBackgroundImage .threeBackground:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-  }
-  .homeApplicationLab .sevenThreeBackgroundImage .container, .homeNutrition .sevenThreeBackgroundImage .container {
-    padding-top: 200px;
+  .shadowCard .card .halfWordHalfImage .imageArea {
+    height: 200px;
   }
 }
 
@@ -1342,36 +1114,15 @@ router-outlet {
 }
 
 .fixedBackground {
-  background-image: url("../../src/images/home/fixedBg.jpg");
+  background-image: url("../../src/images/nutrition/fixedBg.jpg");
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .sevenBackground {
-  background-image: url("../../src/images/home/applicationLabBg.jpg");
+.mainTitle .h3 {
+  font-size: 24px;
 }
 
-.homeApplicationLab .sevenThreeBackgroundImage .threeBackground {
-  background-image: url("../../src/images/home/applicationLabBg2.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .sevenBackground {
-  background-image: url("../../src/images/home/nutritionBg.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .threeBackground {
-  background-image: url("../../src/images/home/nutritionBg2.jpg");
-}
-
-.homeNutrition .sevenThreeBackgroundImage .container .h1 {
-  color: #fcfcfd;
-}
-
-.homeNutrition .sevenThreeBackgroundImage .container .description {
-  color: #fcfcfd;
-}
-
-@media (max-width: 768px) {
-  .homeNutrition .sevenThreeBackgroundImage .threeBackground:after {
-    background: rgba(0, 0, 0, 0.1);
-  }
+.shadowCard .card {
+  padding: 0;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

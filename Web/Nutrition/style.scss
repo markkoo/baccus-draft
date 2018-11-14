@@ -1,0 +1,30 @@
+@import '../../src/module/stooges-variables';
+@import '../../src/scss/project-variables';
+@import '../../src/module/stooges-mixin';
+@import '../../src/scss/project-mixin';
+@import '../../src/module/stooges-basscss';
+@import '../../src/scss/project-basscss';
+@import '../../src/scss/fontFamily';
+
+.fixedBackground{
+    @extend %fixedBackground;
+    background-image: url('../../src/images/nutrition/fixedBg.jpg');
+}
+
+.mainTitle{
+    @extend %transparentBigTitle;
+    .h3{
+        font-size: 24px;
+    }
+}
+.shadowCard{
+    .card{
+        @extend %shadowCard;
+        padding:0;
+        overflow: hidden;
+
+        .halfWordHalfImage{
+            @extend %halfWordHalfImage;
+        }
+    }
+}

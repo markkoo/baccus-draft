@@ -19,7 +19,7 @@ $box-shadow : 0 6px 20px 0 rgba(0,0,0,0.1);
         font-size: 24px;
     }
 }
-.buttonPrimaryLg{
+.buttonPrimaryOutlineLg{
     outline:none;
     background: transparent;
     cursor: pointer;
@@ -37,7 +37,7 @@ $box-shadow : 0 6px 20px 0 rgba(0,0,0,0.1);
         color:$color-secondary-1;
     }
 }
-.buttonSecondaryLg{
+.buttonSecondaryOutlineLg{
     outline:none;
     background: transparent;
     cursor: pointer;
@@ -53,6 +53,26 @@ $box-shadow : 0 6px 20px 0 rgba(0,0,0,0.1);
         background:$color-main;
         border-color:$color-main;
         color:$font-color-3;
+    }
+}
+.buttonPrimaryLg{
+    outline:none;
+    background: transparent;
+    cursor: pointer;
+    border:none;
+    height:43px;
+    background:$color-main;
+    color:white;
+    width:100%;
+    font-family: $font-family-2;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+    text-align: center;
+    &:hover{
+        background:white;
+        color:$color-main;
+        border:2px solid $color-main;
     }
 }
 // end global
@@ -242,6 +262,7 @@ header{
     visibility: hidden;
     display: block;
     position: fixed;
+    z-index: 1;
     top:0;
     left: 0;
     width:100%;
@@ -261,7 +282,7 @@ header{
         left: 0;
         width:100%;
         height: 100%;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.5);
     }
     .content{
         position: absolute;
@@ -447,61 +468,7 @@ header{
         }
         form{
             margin-top:10px;
-            input,
-            textarea {
-                font-family: $font-family-3;
-                width: 100%;
-                background: rgba(255,255,255, 0.65);
-                border: 1px solid #222222;
-                color: #000;
-                height: 45px;
-                margin-bottom: 5px;
-                outline: none;
-                padding: 0 20px;
-            }
-
-            textarea {
-                height: 196px;
-                padding-top: 15px;
-                margin-bottom: 0;
-            }
-
-            .inputfile {
-                width: 0.1px;
-                height: 0.1px;
-                opacity: 0;
-                overflow: hidden;
-                position: absolute;
-                z-index: -1;
-
-                &+label {
-                    font-family: $font-family-3;
-                    width: 100%;
-                    background: rgba(255,255,255, 0.65);
-                    border: 1px solid #222222;
-                    color: $font-color-1;
-                    font-size: 13px;
-                    height: 45px;
-                    margin-bottom: 5px;
-                    outline: none;
-                    padding: 11px 20px;
-                    display: block;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    cursor: pointer;
-                    overflow: hidden;
-                }
-            }
-
-            .inputfile+label svg {
-                width: 18px;
-                height: 18px;
-                vertical-align: middle;
-                fill: currentColor;
-                margin-top: -0.25em;
-                margin-right: 0.25em;
-            }
-
+            @extend %form;
         }
     }
 }
@@ -523,236 +490,104 @@ header{
     }
 }
 /////////////////////////////////////
-%fixedBackground{
-    background-image: url('../../src/images/home/fixedBg.jpg');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    &:after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: rgba(0,0,0,0.42);
-    }
-}
-%section{
-    padding:60px 0;
-}
-%media{
-    @media #{$breakpoint-down-sm}{
-        .h1{
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-    }
-}
 
-%fullScreenVideo{
-    width:100%;
-    height:100vh;
-    position: relative;
-    margin-top:-90px;
-    overflow: hidden;
-    video{
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom:0;
-        min-width: 100%; 
-        min-height: 100%;
-        object-fit: cover;
-    }
-    .content{
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding:10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color:white;
-        text-align: center;
-        text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
-        .h1{
-            margin-top: 50px;
-            font-family: $font-family-2;
-        }
-        .line{
-            width:200px;
-            height:3px;
-            background-color:white;
-            margin-bottom: 15px;
-            box-shadow: 1px 1px 0 rgba(0,0,0,0.6);
-        }
-        .h3{
-            line-height: 1.4;
-        }
-    }
-    @extend %media;
-    @media #{$breakpoint-down-sm}{
-        .content{
-            .h3{
-                font-size: 18px;
-            }
-        }
-    }
-}
-%threeByTwoContentWithBackground{
-    @extend %section;
-    .h1{
-        text-align: center;
-        color:white;
-        font-family: $font-family-2;
-        margin-bottom: 50px;
-    }
-    a{
-        &.image-scale-45by25:before {
-            padding-top: calc(25/45 * 100%);
-        }
-        &:hover{
-            img{
-                transform: scale(1.2);
-            }
-            .title{
-                transform: translateY(-50px);
-                background: rgba(black, 0.5);
-            }
-        }
-        img{
-            width:100%;
-            transition: 1s ease-in;
-        }
-        .title{
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            margin-bottom: 0;
-            width: 100%;
-            padding:5px 10px;
-            text-align: center;
-            color:white;
-            transition: .3s ease-in;
-            background: rgba(black, 0.3);
-            text-transform: capitalize;
-        }
-    }
-    @extend %media;
-}
-%sevenThereContent{
-    @extend %media;
-    .sevenThreeBackgroundImage{
-        position: relative;
-        .sevenBackground,
-        .threeBackground{
-            position: absolute;
-            height: 100%;
-            background-size: cover; 
-            background-repeat:no-repeat; 
-        }
-        .sevenBackground{
-            width:70%;
-            left: 0;
-        }
-        .threeBackground{
-            width:30%;
-            right: 0;
-        }
-        .container{
-            padding-top:300px;
-            padding-bottom:100px;
-            .h1{
-                font-family: $font-family-2;
-            }
-            .description{
-                color:$font-color-1;
-            }
-            a{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width:250px;
-            }
-        }
-        @media #{$breakpoint-down-sm}{
-            .threeBackground{
-                &:after{
-                    content:'';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width:100%;
-                    height: 100%;
-                    background:rgba(white, 0.9);
-                }
-            }
-            .container{
-                padding-top:200px;
-            }
-        }
-    }
-}
-
-
-// home
 .fixedBackground{
     @extend %fixedBackground;
+    background-image: url('../../src/images/about/fixedBg.jpg');
 }
 
-.video{
-    @extend %fullScreenVideo;
+.mainTitle{
+    @extend %transparentBigTitle;
 }
+.shadowCard{
+    .card{
+        @extend %shadowCard;
 
-.homeFlavour{
-    @extend %threeByTwoContentWithBackground;
-}
-
-.homeApplicationLab{
-    @extend %sevenThereContent;
-    .sevenThreeBackgroundImage{
-        .sevenBackground{
-            background-image: url('../../src/images/home/applicationLabBg.jpg');
-        }
-        .threeBackground{
-            background-image: url('../../src/images/home/applicationLabBg2.jpg');
-        }
-    }
-}
-.homeNutrition{
-    @extend %sevenThereContent;
-    .sevenThreeBackgroundImage{
-        .sevenBackground{
-            background-image: url('../../src/images/home/nutritionBg.jpg');
-        }
-        .threeBackground{
-            background-image: url('../../src/images/home/nutritionBg2.jpg');
-        }
-        .container{
-            .h1{
-                color:$font-color-5;
+        .stepper{
+            padding:0 20px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 860px;
+            margin:auto;
+            position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                height:1px;
+                width:100%;
+                left:0;
+                top:50%;
+                background: $font-color-4;
             }
-            .description{
-                color:$font-color-5;
+            .step{
+                position: relative;
+                display: flex;
+                margin: 5px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-size: 14px;
+                width:82px;
+                height:82px;
+                border:2px solid $font-color-4;
+                border-radius: 50%;
+                background: white;
+                cursor: pointer;
+                transition: .3s ease-in;
+                &.active,
+                &:hover{
+                    border-color:$color-main;
+                    color:$color-main;
+                }
             }
-        }
-        @media #{$breakpoint-down-sm}{
-            .threeBackground{
-                &:after{
-                    background:rgba(black, 0.1);
+            @media #{$breakpoint-down-sm}{
+                padding:0 15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: normal;
+                &:before{
+                    content:none;
+                }
+                .step{
+                    height:42px;
+                    border-radius: 0;
                 }
             }
         }
+
+        .centerContent{
+            @extend %centerContent;
+            margin-top:10px;
+            .content{
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+                &.show{
+                    display: block;
+                    animation: anim-stepper 1s ease 0.2s 1 normal both running;
+                }
+                h2{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    color:black;
+                    font-family: $font-family-2;
+                    text-transform: uppercase;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes anim-stepper {
+    0% {
+        transform: translateY(-80px);
+        display: block;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 }
