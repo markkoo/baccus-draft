@@ -1,0 +1,108 @@
+@import '../../src/module/stooges-variables';
+@import '../../src/scss/project-variables';
+@import '../../src/module/stooges-mixin';
+@import '../../src/scss/project-mixin';
+@import '../../src/module/stooges-basscss';
+@import '../../src/scss/project-basscss';
+@import '../../src/scss/fontFamily';
+
+.fixedBackground{
+    @extend %fixedBackground;
+    background-image: url('../../src/images/about/fixedBg.jpg');
+}
+
+.mainTitle{
+    @extend %transparentBigTitle;
+}
+.shadowCard{
+    .card{
+        @extend %shadowCard;
+
+        .stepper{
+            padding:0 20px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 860px;
+            margin:auto;
+            position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                height:1px;
+                width:100%;
+                left:0;
+                top:50%;
+                background: $font-color-4;
+            }
+            .step{
+                position: relative;
+                display: flex;
+                margin: 5px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-size: 14px;
+                width:82px;
+                height:82px;
+                border:2px solid $font-color-4;
+                border-radius: 50%;
+                background: white;
+                cursor: pointer;
+                transition: .3s ease-in;
+                &.active,
+                &:hover{
+                    border-color:$color-main;
+                    color:$color-main;
+                }
+            }
+            @media #{$breakpoint-down-sm}{
+                padding:0 15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: normal;
+                &:before{
+                    content:none;
+                }
+                .step{
+                    height:42px;
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .centerContent{
+            @extend %centerContent;
+            margin-top:10px;
+            .content{
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+                &.show{
+                    display: block;
+                    animation: anim-stepper 1s ease 0.2s 1 normal both running;
+                }
+                h2{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    color:black;
+                    font-family: $font-family-2;
+                    text-transform: uppercase;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes anim-stepper {
+    0% {
+        transform: translateY(-80px);
+        display: block;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
