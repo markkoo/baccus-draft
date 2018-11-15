@@ -1,0 +1,114 @@
+::-moz-selection {
+  background: #89331B;
+  color: white;
+}
+
+::selection {
+  background: #89331B;
+  color: white;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.flaticon-menu:before {
+  content: "\f100";
+}
+
+.flaticon-right-arrow:before {
+  content: "\f101";
+}
+
+.flaticon-up-arrow:before {
+  content: "\f102";
+}
+
+.flaticon-down-arrow:before {
+  content: "\f103";
+}
+
+.flaticon-cancel:before {
+  content: "\f104";
+}
+
+.buttonIcon {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.buttonIcon i {
+  font-size: 24px;
+}
+
+.buttonPrimaryOutlineLg {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid #89331B;
+  height: 43px;
+  color: #89331B;
+  width: 100%;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-align: center;
+}
+
+.buttonPrimaryOutlineLg:hover {
+  border-color: #D5D7DB;
+  color: #D5D7DB;
+}
+
+.buttonSecondaryOutlineLg {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid white;
+  height: 43px;
+  color: white;
+  width: 100%;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.buttonSecondaryOutlineLg:hover {
+  background: #89331B;
+  border-color: #89331B;
+  color: #a5a7ac;
+}
+
+.buttonPrimaryLg {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  height: 43px;
+  background: #89331B;
+  color: white;
+  width: 100%;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-align: center;
+}
+
+.buttonPrimaryLg:hover {
+  background: white;
+  color: #89331B;
+  border: 2px solid #89331B;
+}
+/*# sourceMappingURL=project-basscss.css.map */

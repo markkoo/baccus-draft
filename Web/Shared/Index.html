@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Baccus</title>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald:700|Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald:700|Poppins" rel="stylesheet"> -->
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
@@ -20,7 +17,7 @@
                 <div class="content">
                     <div class="toggleNavButton">
                         <button class="buttonIcon">
-                            <i class="fas fa-bars"></i>
+                            <i class="flaticon-menu"></i>
                         </button>
                     </div>
                     <div class="logo">
@@ -72,7 +69,7 @@
             </a>
             <nav id="mobileNav"></nav>
             <button class="buttonIcon">
-                <i class="far fa-times-circle"></i>
+                <i class="flaticon-cancel"></i>
             </button>
         </div>
     </div>
@@ -229,6 +226,10 @@ Malaysia.</a>
         </div>
     </footer>
 
+    <div id="scrollToTop" class="scrollToTop">
+        <i class="flaticon-up-arrow xs-hide"></i>
+    </div>
+
     <script>
         const mobileNavElem = document.getElementById('mobileNav');
         document.getElementById('pcNav').childNodes.forEach((node) => {
@@ -236,14 +237,21 @@ Malaysia.</a>
             mobileNavElem.appendChild(clone);
         });
 
+        const headerNav = document.getElementById('header');
+        const scrollTopElem = document.getElementById('scrollToTop');
         window.addEventListener('scroll', () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const headerNav = document.getElementById('header');
             if (scrollTop < 200) {
                 headerNav.classList.remove('fixed');
+                scrollTopElem.classList.remove('show');
             } else {
                 headerNav.classList.add('fixed');
+                scrollTopElem.classList.add('show');
             }
+        });
+
+        document.getElementById('scrollToTop').addEventListener('click', () => {
+            scrollToTop();
         });
 
         document.querySelectorAll('.toggleNavButton, #fixedMobileNav .overlay, #fixedMobileNav button').forEach((elem) => {

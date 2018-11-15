@@ -7,3 +7,83 @@
     background: $color-main;
     color: white;
 }
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.flaticon-menu:before { content: "\f100"; }
+.flaticon-right-arrow:before { content: "\f101"; }
+.flaticon-up-arrow:before { content: "\f102"; }
+.flaticon-down-arrow:before { content: "\f103"; }
+.flaticon-cancel:before { content: "\f104"; }
+
+.buttonIcon{
+    outline:none;
+    border:none;
+    background: transparent;
+    cursor: pointer;
+    color:white;
+    i{
+        font-size: 24px;
+    }
+}
+.buttonPrimaryOutlineLg{
+    outline:none;
+    background: transparent;
+    cursor: pointer;
+    border:2px solid $color-main;
+    height:43px;
+    color:$color-main;
+    width:100%;
+    font-family: $font-family-2;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+    text-align: center;
+    &:hover{
+        border-color:$color-secondary-1;
+        color:$color-secondary-1;
+    }
+}
+.buttonSecondaryOutlineLg{
+    outline:none;
+    background: transparent;
+    cursor: pointer;
+    border:2px solid white;
+    height:43px;
+    color:white;
+    width:100%;
+    font-family: $font-family-2;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+    &:hover{
+        background:$color-main;
+        border-color:$color-main;
+        color:$font-color-3;
+    }
+}
+.buttonPrimaryLg{
+    outline:none;
+    background: transparent;
+    cursor: pointer;
+    border:none;
+    height:43px;
+    background:$color-main;
+    color:white;
+    width:100%;
+    font-family: $font-family-2;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+    text-align: center;
+    &:hover{
+        background:white;
+        color:$color-main;
+        border:2px solid $color-main;
+    }
+}

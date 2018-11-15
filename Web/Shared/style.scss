@@ -1,81 +1,10 @@
+@import '../../src/scss/fontFamily';
 @import '../../src/module/stooges-variables';
 @import '../../src/scss/project-variables';
 @import '../../src/module/stooges-mixin';
 @import '../../src/scss/project-mixin';
 @import '../../src/module/stooges-basscss';
 @import '../../src/scss/project-basscss';
-@import '../../src/scss/fontFamily';
-
-$box-shadow : 0 6px 20px 0 rgba(0,0,0,0.1);
-
-// global
-.buttonIcon{
-    outline:none;
-    border:none;
-    background: transparent;
-    cursor: pointer;
-    color:white;
-    i{
-        font-size: 24px;
-    }
-}
-.buttonPrimaryOutlineLg{
-    outline:none;
-    background: transparent;
-    cursor: pointer;
-    border:2px solid $color-main;
-    height:43px;
-    color:$color-main;
-    width:100%;
-    font-family: $font-family-2;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: .3s;
-    text-align: center;
-    &:hover{
-        border-color:$color-secondary-1;
-        color:$color-secondary-1;
-    }
-}
-.buttonSecondaryOutlineLg{
-    outline:none;
-    background: transparent;
-    cursor: pointer;
-    border:2px solid white;
-    height:43px;
-    color:white;
-    width:100%;
-    font-family: $font-family-2;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: .3s;
-    &:hover{
-        background:$color-main;
-        border-color:$color-main;
-        color:$font-color-3;
-    }
-}
-.buttonPrimaryLg{
-    outline:none;
-    background: transparent;
-    cursor: pointer;
-    border:none;
-    height:43px;
-    background:$color-main;
-    color:white;
-    width:100%;
-    font-family: $font-family-2;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: .3s;
-    text-align: center;
-    &:hover{
-        background:white;
-        color:$color-main;
-        border:2px solid $color-main;
-    }
-}
-// end global
 
 header{
     height:90px;
@@ -252,6 +181,9 @@ header{
                     display: flex;
                     align-items: center;
                 }
+                .flexBox{
+                    width:32px;
+                }
             }
         }
     }
@@ -363,6 +295,9 @@ header{
             left: 50%;
             transform: translateX(-50%);
             color:$color-main;
+            i:before{
+                font-size: 40px;
+            }
         }
     }
 }
@@ -448,10 +383,11 @@ header{
                     border:none;
                 }
                 &:before{
-                    content: "\f105";
-                    font-family: "Font Awesome 5 Free";
+                    content: "\f101";
+                    font-family: "Flaticon";
                     font-weight: 900;
                     margin-right: 5px;
+                    font-size: 10px;
                 }
                 &:hover{
                     color:white;
@@ -488,6 +424,39 @@ header{
             }
         }
     }
+}
+
+.scrollToTop {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 1;
+    background: $color-main;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in;
+
+    &:hover{
+        opacity: 1;
+    }
+
+    &.show {
+        opacity: 0.8;
+        visibility: visible;
+        pointer-events: default;
+    }
+
+    i:before{
+        font-size: 14px;
+    }
+
 }
 /////////////////////////////////////
 
